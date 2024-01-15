@@ -6,6 +6,12 @@
       "use": "@vercel/node"
     }
   ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "index.js"
+    }
+  ],
   "routes": [
     {
       "src": "/",
@@ -18,7 +24,18 @@
     {
       "src": "/insta",
       "dest": "/index.js"
+    },
+    {
+      "src": "/instapro",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/youtube",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/ytdown",
+      "dest": "/index.js"
     }
-    
   ]
 }
