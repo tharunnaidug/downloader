@@ -1,15 +1,41 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "index.js"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/instagram",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/insta",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/instapro",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/youtube",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/ytdown",
+      "dest": "/index.js"
+    }
+  ]
+}

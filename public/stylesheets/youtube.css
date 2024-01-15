@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel='stylesheet' href='/stylesheets/insta.css' /> -->
-  <title>Instagram Downloader</title>
-</head>
-<style>
-  * {
+* {
     margin: 0;
   }
 
@@ -30,30 +20,43 @@
     font-family: 'Josefin Sans', sans-serif;
   }
 
-
-  img {
-    height: 50vh;
-    width: 30vw;
-    padding: 10px;
-    max-width: 300px;
+  h1 {
+    font: 1.5em 'Roboto Slab', serif;
   }
 
   .con {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
     flex-direction: column;
-    margin: 10px 5px;
+    width: 100%;
+    background-color: #F4D35E;
+    height: 89.5vh;
   }
 
-  h1,
-  h5 {
-    text-align: center;
-    margin: auto;
-    padding: 5px;
+  form {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
-  a {
+  input {
+    padding: 7px;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #fbfbfb;
+    border: 2px solid transparent;
+    height: 36px;
+    box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
+
+    :focus {
+      border: 2px solid #000;
+      border-radius: 4px;
+    }
+  }
+
+  button {
     margin-top: 10px;
     background-color: #13aa52;
     border: 1px solid #13aa52;
@@ -74,42 +77,8 @@
     text-decoration: none;
   }
 
-  .div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  h5 {
-    padding: 10px;
-  }
-
   @media only screen and (max-width: 600px) {
     nav h2 {
-      font-size: 1.75rem;
-    }
-
-    img {
-      height: 55vh;
-      width: 60vw;
-      margin-left: 0;
+      font-size: 2rem;
     }
   }
-</style>
-
-<body>
-  <nav>
-    <div>
-      <h2> Social Media Downloader</h2>
-    </div>
-  </nav>
-  <div class="con">
-    <h1><%=type%></h1>
-    <img src="<%=img %>" alt="preview">
-    <h5>Title:<%=title%></h5>
-    <a target="_blank" href="<%=down%>">Download</a>
-    <a href="/">Home</a>
-  </div>
-</body>
-
-</html>
